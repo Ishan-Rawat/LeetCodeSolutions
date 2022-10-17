@@ -28,7 +28,28 @@ public class ItemsMatchingRule {
 		inner3.add("Iphonee");
 		items.add(inner3);
 		
-		System.out.println(items);
+		String ruleKey = "color";
+		String ruleVal = "Silver";
+		
+		System.out.println(countMatches(items, ruleKey, ruleVal));
 	}
-	
+	static int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+        int counter=0;
+        if(ruleKey.equals("type")){
+            for(int i=0; i<items.size(); i++){
+                if(items.get(i).get(0).equals(ruleValue))counter++;
+            }
+        }
+        else if(ruleKey.equals("color")){
+            for(int i=0; i<items.size(); i++){
+                if(items.get(i).get(1).equals(ruleValue))counter++;
+            }
+        }
+        else{
+            for(int i=0; i<items.size(); i++){
+                if(items.get(i).get(2).equals(ruleValue))counter++;
+            }
+        }
+        return counter;
+    }
 }
