@@ -3,6 +3,7 @@ package ArrayProblems;
  * Problem title: 1832. Check if the Sentence Is Pangram
  * Link: https://leetcode.com/problems/check-if-the-sentence-is-pangram/
  */
+//This is a O(n) time complexity solution. All other solutions discussed on LeetCode are O(n) time complexity solutions as well.
 public class Pangram {
 	public static void main(String args[]) {
 		System.out.println(checker("thequickbrownfoxjumpsoverthelazydog"));
